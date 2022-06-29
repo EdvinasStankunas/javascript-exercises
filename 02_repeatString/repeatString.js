@@ -1,5 +1,5 @@
 const repeatString = function (string, repeatCount) {
-  if (number < 0) return "ERROR";
+  if (repeatCount < 0) return "ERROR";
   let repeatedString = "";
   for (let i = 0; i < repeatCount; i++) {
     repeatedString += string;
