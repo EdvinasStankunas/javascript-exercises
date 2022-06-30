@@ -1,7 +1,12 @@
-const removeFromArray = function (array, value) {
-  array.splice(value - 1, 1);
-  return array;
+const removeFromArray = function (...values) {
+  const array = values.shift();
+  const newArray = [];
+  array.forEach((item) => {
+    if (!values.includes(item)) {
+      newArray.push(item);
+    }
+  });
+  return newArray;
 };
-
 // Do not edit below this line
 module.exports = removeFromArray;
