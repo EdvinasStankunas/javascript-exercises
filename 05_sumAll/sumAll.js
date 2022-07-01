@@ -1,5 +1,6 @@
 const sumAll = function (rangeStart, rangeEnd) {
   let sum = 0;
+  
   if (
     typeof rangeStart !== "number" ||
     typeof rangeEnd !== "number" ||
