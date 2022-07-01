@@ -1,21 +1,27 @@
-const sumAll = function (firstArg, secArg) {
+const sumAll = function (rangeStart, rangeEnd) {
   let sum = 0;
   if (
-    typeof firstArg != "number" ||
-    typeof secArg != "number" ||
-    firstArg <= 0 ||
-    secArg <= 0
+    typeof rangeStart !== "number" ||
+    typeof rangeEnd !== "number" ||
+    rangeStart <= 0 ||
+    rangeEnd <= 0
   ) {
     return "ERROR";
   }
-  if (firstArg > secArg) {
-    const temp = firstArg;
-    firstArg = secArg;
-    secArg = temp;
-  }
-  for (let x = firstArg; x < secArg + 1; x++) {
+
+  const min = Math.min(rangeStart, rangeEnd);
+  const max = Math.max(rangeStart, rangeEnd);
+
+  /*if (rangeStart > rangeEnd) {
+    const temp = rangeStart;
+    rangeStart = rangeEnd;
+    rangeEnd = temp;
+  }*/
+
+  for (let x = min; x < max + 1; x++) {
     sum = sum + x;
   }
+
   return sum;
 };
 // Do not edit below this line
