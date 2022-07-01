@@ -1,8 +1,8 @@
 //This line declares function that can accept multiple arguments and puts them in an array
-const removeFromArray = function (...values) {
+const removeFromArray = function (a, ...values) {
   //Since the first passed value in values[] is an array that needs to be compared to values array, this puts the first passed value into it's own array
   //Lack of caffeine made me anxious about first value (array) passing into filteredArray, but now I see the obvious.
-  const array = values[0];
+  const array = a;
   //This line declares a new array which is going to receive the elements that return false value after .includes() method runs
   const filteredArray = array.filter((item) => !values.includes(item));
 
