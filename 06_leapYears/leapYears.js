@@ -1,11 +1,8 @@
-const leapYears = function (largeYear) {
-  if (largeYear % 4 == 0 && largeYear % 100 != 0) {
+const leapYears = function (year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     return true;
-  } else {
-    if (largeYear % 400 == 0) {
-      return true;
-    }
   }
+
   return false;
 };
 
